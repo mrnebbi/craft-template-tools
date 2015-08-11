@@ -6,7 +6,7 @@ A Craft plugin to provide twig filters to help with template building.
 
 ## firstTag
 
-Easily add a class, ID, or other attribute to the first element of a specific type. Use this to provide easy first paragraph classes.
+Easily add a class, ID, or other attribute to the first element of a specific type. Useful for adding a class to the first paragraph.
 
 ```
 firstTag($value)
