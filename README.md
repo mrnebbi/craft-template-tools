@@ -8,27 +8,36 @@ A Craft plugin to provide twig filters to help with template building.
 
 Easily add a class, ID, or other attribute to the first element of a specific type. Useful for adding a class to the first paragraph.
 
+### Add a class
+
 ```
-{{ content|firstTag($value) }}
+{{ content|firstTag('classname') }}
 ```
 
 By default this adds a class name to the first P tag.
 Add a `.` or `#` to set an ID or Class.
 
+### Add an ID
 
 ```
-{{ content|firstTag($value,$tag) }}
+{{ content|firstTag('#idname') }}
 ```
 
-Sets a class name or ID to the first tag of a type specified by you. e.g. `firstTag('lead','h2')`
+### Add to a non paragraph
+Sets a class name or ID to the first tag of a type specified by you. e.g.
+
+```
+{{ content|firstTag('classname','h2') }}
+```
 Add a `.` or `#` to set an ID or Class.
 
-
-```
-{{ content|firstTag($value,$tag,$attr) }}
-```
-
+### Add custom attribute and value to a non paragraph
 Sets a value for a specified attribute to the first tag of a type specified by you.
+```
+{{ content|firstTag('slider1','img','data-slider') }}
+```
+
+
 ```
 {{ content|firstTag('lead','h2','data-heading') }}
 ```
