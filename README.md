@@ -20,7 +20,7 @@ Add a `.` or `#` to set an ID or Class.
 {{ content|firstTag($value,$tag) }}
 ```
 
-Sets a class name or ID to the first tag of a type specified by you. E.g. `firstTag('lead','h2')`
+Sets a class name or ID to the first tag of a type specified by you. e.g. `firstTag('lead','h2')`
 Add a `.` or `#` to set an ID or Class.
 
 
@@ -28,7 +28,7 @@ Add a `.` or `#` to set an ID or Class.
 {{ content|firstTag($value,$tag,$attr) }}
 ```
 
-Sets a value for a specified attribute to the first tag of a type specified by you. E.g.
+Sets a value for a specified attribute to the first tag of a type specified by you.
 ```
 {{ content|firstTag('lead','h2','data-heading') }}
 ```
