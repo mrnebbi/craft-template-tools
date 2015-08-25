@@ -40,5 +40,4 @@ class TemplateToolsTwigExtension extends Twig_Extension {
       return TemplateHelper::getRaw($return);
   }
   
-
 }
