@@ -41,3 +41,23 @@ Sets a value for a specified attribute to the first tag of a type specified by y
 ```
 {{ content|firstTag('lead','h2','data-heading') }}
 ```
+
+
+
+## getFirstParagraph
+
+Retrieve the first paragraph from content.
+
+### Get paragraph only
+
+```
+{{ content|getFirstParagraph }}
+```
+
+### Get paragraph and remove P tags
+
+Add a flag of true to remove the P tags from the content.
+
+```
+{{ content|getFirstParagraph(true) }}
+```

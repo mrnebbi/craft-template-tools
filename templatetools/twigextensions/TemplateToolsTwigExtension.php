@@ -16,6 +16,7 @@ class TemplateToolsTwigExtension extends Twig_Extension {
 	{
 		return array(
 			'firstTag' => new Twig_Filter_Method($this, 'firstTag'),
+			'getFirstParagraph' => new Twig_Filter_Method($this, 'getFirstParagraph'),
 		);
 	}
   
@@ -39,5 +40,23 @@ class TemplateToolsTwigExtension extends Twig_Extension {
       $return  = preg_replace('/<' . $tag . '([^>]+)?>/', '<' . $tag . '$1 ' . $attr . '="' . $value . '">', $html, 1);
       return TemplateHelper::getRaw($return);
   }
+  
+  
+  public function getFirstParagraph($html,$stripP = false)
+  {
+      
+      // Get the first paragraph and return it to the template
+      
+      // This function needs to be improved to ignore items before the first paragraph
+
+      $return = substr( $html, 0, strpos( $html, '</p>' ) + 4 );
+    	
+    	if ($stripP) {
+      	$return = strip_tags($return, '<a><strong><em>');
+    	}
+      
+      return TemplateHelper::getRaw($return);
+  }
+  
   
 }
