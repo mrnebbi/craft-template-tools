@@ -17,6 +17,7 @@ class TemplateToolsTwigExtension extends Twig_Extension {
 		return array(
 			'firstTag' => new Twig_Filter_Method($this, 'firstTag'),
 			'getFirstParagraph' => new Twig_Filter_Method($this, 'getFirstParagraph'),
+			'wrapLinesInTag' => new Twig_Filter_Method($this, 'wrapLinesInTag'),
 		);
 	}
   
@@ -56,6 +57,13 @@ class TemplateToolsTwigExtension extends Twig_Extension {
     	}
       
       return TemplateHelper::getRaw($return);
+  }
+  
+  
+  public function wrapLinesInTag($html,$tag)
+  {
+	  $return = '<' . $tag . '>'.str_replace(array("\r","\n\n","\n"),array('',"\n","</$tag>\n<$tag>"),trim($html,"\n\r")).'</' . $tag . '>';
+	  return TemplateHelper::getRaw($return);
   }
   
   

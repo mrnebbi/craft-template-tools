@@ -1,7 +1,7 @@
 # Template Tools
 
 
-[![version 1.1](https://img.shields.io/badge/version-1.1-brightgreen.svg)](https://github.com/ianisted/template-tools)
+[![version 1.1.1](https://img.shields.io/badge/version-1.1.1-brightgreen.svg)](https://github.com/ianisted/template-tools)
 
 
 A Craft plugin to provide twig filters to help with template building.
@@ -64,4 +64,13 @@ Add a flag of true to remove the P tags from the content.
 
 ```
 {{ content|getFirstParagraph(true) }}
+```
+
+
+## wrapLinesInTag
+
+This wraps any lines in multiline text in a tag your choosing.
+
+```
+{{ content|wrapLinesInTag('span') }}
 ```
