@@ -1,7 +1,7 @@
 # Template Tools
 
 
-[![version 1.1.1](https://img.shields.io/badge/version-1.1.1-brightgreen.svg)](https://github.com/ianisted/template-tools)
+[![version 1.2.0](https://img.shields.io/badge/version-1.2.0-brightgreen.svg)](https://github.com/ianisted/template-tools)
 
 
 A Craft plugin to provide twig filters to help with template building.
@@ -69,8 +69,31 @@ Add a flag of true to remove the P tags from the content.
 
 ## wrapLinesInTag
 
-This wraps any lines in multiline text in a tag your choosing.
+This wraps any lines in multiline text in a tag of your choosing.
 
 ```
 {{ content|wrapLinesInTag('span') }}
+```
+
+
+## getQueryStrings
+
+Pull an array of query strings from Craft. This gets around the problem of duplicated query string keys being lost, turning them into an array you can loop through.
+
+An array will be returned with objects. Use `.key` and `.value`.
+
+### Return all URL queries
+
+```
+{% for query in getQueryStrings() %}
+	{{ query.key }} - {{ query.value }}
+{% endfor %}
+```
+
+### Return only URL queries that match a key
+
+```
+{% for query in getQueryStrings('lookForKey') %}
+	{{ query.key }} - {{ query.value }}
+{% endfor %}
 ```
