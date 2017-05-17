@@ -79,7 +79,11 @@ class TemplateToolsTwigExtension extends Twig_Extension {
     }
 
     // Break query apart to separate individual parts
-    $queries = explode("&", $queries[1]);
+    if (sizeof($queries) > 1) {
+      $queries = explode("&", $queries[1]);
+    } else {
+      return false;
+    }
 
     // Setup object array to return later
     $objectArray = array();
