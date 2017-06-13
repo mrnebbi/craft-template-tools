@@ -18,6 +18,7 @@ class TemplateToolsTwigExtension extends Twig_Extension {
 			'firstTag' => new Twig_Filter_Method($this, 'firstTag'),
 			'getFirstParagraph' => new Twig_Filter_Method($this, 'getFirstParagraph'),
 			'wrapLinesInTag' => new Twig_Filter_Method($this, 'wrapLinesInTag'),
+      'preserveQueryStrings' => new Twig_Filter_Method($this, 'preserveQueryStrings')
 		);
 	}
 
@@ -65,6 +66,27 @@ class TemplateToolsTwigExtension extends Twig_Extension {
     	}
       
       return TemplateHelper::getRaw($return);
+  }
+
+
+  public function preserveQueryStrings($url)
+  {
+    if (substr(craft()->request->queryString, 0,2) == "p=") {
+      $queries = explode("&", craft()->request->queryString, 2);
+      $queryStrings = $queries[1];
+    } else {
+      $queryStrings = craft()->request->queryString;
+    }
+
+    if (substr($url,-1) != "?") {
+      $return = $url . "?";
+    } else {
+      $return = $url;
+    }
+
+    $return = $return . $queryStrings;
+    
+    return TemplateHelper::getRaw($return);
   }
 
 

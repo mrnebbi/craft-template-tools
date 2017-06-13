@@ -1,7 +1,7 @@
 # Template Tools
 
 
-[![version 1.2.1](https://img.shields.io/badge/version-1.2.1-brightgreen.svg)](https://github.com/ianisted/template-tools)
+[![version 1.2.2](https://img.shields.io/badge/version-1.2.2-brightgreen.svg)](https://github.com/ianisted/template-tools)
 
 
 A Craft plugin to provide twig filters to help with template building.
@@ -73,6 +73,17 @@ This wraps any lines in multiline text in a tag of your choosing.
 
 ```
 {{ content|wrapLinesInTag('span') }}
+```
+
+## preserveQueryStrings
+
+The Preserve Query String filter allows you to add `|preserveQueryStrings` to any URL output in twig, and it will keep the query strings as they should appear in the URL.
+
+E.g.
+
+```
+{% if pageInfo.prevUrl %}<a href="{{ pageInfo.prevUrl|preserveQueryStrings }}">Previous Page</a>{% endif %}
+{% if pageInfo.nextUrl %}<a href="{{ pageInfo.nextUrl|preserveQueryStrings }}">Next Page</a>{% endif %}
 ```
 
 
