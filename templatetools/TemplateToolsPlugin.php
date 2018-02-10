@@ -10,7 +10,7 @@ class TemplateToolsPlugin extends BasePlugin
 
     function getVersion()
     {
-        return '1.3.2';
+        return '2.0.0';
     }
 
     function getDeveloper()
