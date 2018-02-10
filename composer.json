@@ -1,0 +1,6 @@
+{
+name: "mrnebbi/craft-template-tools",
+description: "Craft CMS Plugin to provide some extra functionality to Twig templates",
+type: "craft-plugin",
+require: { }
+}
