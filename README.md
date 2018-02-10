@@ -6,7 +6,9 @@
 
 A Craft plugin to provide twig filters to help with template building.
 
-
+***
+Please note: As of version 2.0, I've removed the Query Strings functionality from template tools. Please use my [Query Strings plugin](https://github.com/mrnebbi/craft-query-strings).
+***
 
 ## firstTag
 
