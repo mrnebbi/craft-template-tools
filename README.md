@@ -1,7 +1,7 @@
 # Template Tools
 
 
-[![version 1.3.2](https://img.shields.io/badge/version-1.3.2-brightgreen.svg)](https://github.com/ianisted/template-tools)
+[![version 2.0.0](https://img.shields.io/badge/version-2.0.0-brightgreen.svg)](https://github.com/ianisted/template-tools)
 
 
 A Craft plugin to provide twig filters to help with template building.
@@ -77,34 +77,15 @@ This wraps any lines in multiline text in a tag of your choosing.
 
 ## preserveQueryStrings
 
-The Preserve Query String filter allows you to add `|preserveQueryStrings` to any URL output in twig, and it will keep the query strings as they should appear in the URL.
+Removed Query Strings functionality. Please use my [Query Strings plugin](https://github.com/mrnebbi/craft-query-strings).
 
-E.g.
-
-```
-{% if pageInfo.prevUrl %}<a href="{{ pageInfo.prevUrl|preserveQueryStrings }}">Previous Page</a>{% endif %}
-{% if pageInfo.nextUrl %}<a href="{{ pageInfo.nextUrl|preserveQueryStrings }}">Next Page</a>{% endif %}
-```
+~~The Preserve Query String filter allows you to add `|preserveQueryStrings` to any URL output in twig, and it will keep the query strings as they should appear in the URL.~~
 
 
 ## getQueryStrings
 
-Pull an array of query strings from Craft. This gets around the problem of duplicated query string keys being lost, turning them into an array you can loop through.
+Removed Query Strings functionality. Please use my [Query Strings plugin](https://github.com/mrnebbi/craft-query-strings).
 
-An array will be returned with objects. Use `.key` and `.value`.
+~~Pull an array of query strings from Craft. This gets around the problem of duplicated query string keys being lost, turning them into an array you can loop through.~~
 
-### Return all URL queries
-
-```
-{% for query in getQueryStrings() %}
-	{{ query.key }} - {{ query.value }}
-{% endfor %}
-```
-
-### Return only URL queries that match a key
-
-```
-{% for query in getQueryStrings('lookForKey') %}
-	{{ query.key }} - {{ query.value }}
-{% endfor %}
-```
+~~An array will be returned with objects. Use `.key` and `.value`.~~
