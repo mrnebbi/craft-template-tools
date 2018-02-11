@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="610px" height="610px" viewBox="0 0 610 610" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>g2v</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon" fill="#81D308" fill-rule="nonzero">
+            <circle id="Oval" cx="305" cy="305" r="305"></circle>
+        </g>
+        <text id="{{-t-}}" font-family="Avenir-Heavy, Avenir" font-size="200" font-weight="600" letter-spacing="0.796875" fill="#FFFFFF">
+            <tspan x="94.8109375" y="356">{{ </tspan>
+            <tspan x="267.601562" y="356" font-family="Avenir-Medium, Avenir" font-weight="400">t</tspan>
+            <tspan x="342.398438" y="356"> }}</tspan>
+        </text>
+    </g>
+</svg>
