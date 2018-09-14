@@ -3,6 +3,7 @@
 	"description": "Craft CMS Plugin to provide some extra functionality to Twig templates",
 	"type": "craft-plugin",
 	"require": { },
+	"version": "2.0.0",
 	"extra": {
 		"name": "Template Tools",
 	    "handle": "template-tools"
